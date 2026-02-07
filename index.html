@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Mastery | Learn Business Intelligence</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://powerbi.microsoft.com/static/images/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-text">Power<span class="bi-text">BI</span> Mastery</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">What is it?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#components">Components</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#workflow">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dax">DAX</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solutions">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary ms-lg-3 px-4" href="#start">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-3 fw-bold mb-4">Transform Data Into <span class="text-gradient">Actionable Insights</span></h1>
+                    <p class="lead mb-4 text-secondary">Master Microsoft Power BI with <strong>Munna Kumar</strong>: The ultimate guide for data visualization and analytics.</p>
+                    <div class="hero-cta">
+                        <a href="#about" class="btn btn-primary btn-lg me-3 px-5 py-3">Explore Now</a>
+                        <a href="#workflow" class="btn btn-outline-light btn-lg px-5 py-3">See Workflow</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="hero-image-wrapper">
+                        <img src="power-bi-dashboard2.png" alt="Power BI Dashboard" class="img-fluid rounded-4 shadow-lg floating-anim">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="power-bi-default-visual-filter.png" alt="Power BI Analytics" class="img-fluid rounded-4 shadow-sm">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h6 class="text-primary fw-bold text-uppercase mb-3">About Power BI</h6>
+                    <h2 class="display-5 fw-bold mb-4">What is Power BI?</h2>
+                    <p class="text-secondary mb-4">Power BI is a collection of software services, apps, and connectors that work together to turn your unrelated sources of data into coherent, visually immersive, and interactive insights.</p>
+                    <div class="row g-4 mt-2">
+                        <div class="col-6">
+                            <div class="info-card">
+                                <i class="fas fa-chart-line text-primary mb-3 h3"></i>
+                                <h5>Visualize</h5>
+                                <p class="small text-secondary">Create stunning charts and reports.</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="info-card">
+                                <i class="fas fa-database text-warning mb-3 h3"></i>
+                                <h5>Connect</h5>
+                                <p class="small text-secondary">Link hundreds of data sources.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section class="section-padding bg-light-soft" id="components">
+        <div class="container text-center mb-5">
+            <h6 class="text-primary fw-bold text-uppercase mb-3">Architecture</h6>
+            <h2 class="display-5 fw-bold mb-5">The Three Pillars of Power BI</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="component-card">
+                        <div class="component-icon bg-primary-soft">
+                            <i class="fas fa-desktop text-primary"></i>
+                        </div>
+                        <h3>Power BI Desktop</h3>
+                        <p class="text-secondary">A free Windows application for building data models and creating reports.</p>
+                        <img src="model-view-03.png" class="img-fluid mt-3 rounded shadow-sm" alt="Desktop View">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="component-card">
+                        <div class="component-icon bg-success-soft">
+                            <i class="fas fa-cloud text-success"></i>
+                        </div>
+                        <h3>Power BI Service</h3>
+                        <p class="text-secondary">An online SaaS (Software as a Service) platform for hosting and sharing reports.</p>
+                        <img src="query-overview-view-icons.png" class="img-fluid mt-3 rounded shadow-sm" alt="Service View">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="component-card">
+                        <div class="component-icon bg-warning-soft">
+                            <i class="fas fa-mobile-alt text-warning"></i>
+                        </div>
+                        <h3>Power BI Mobile</h3>
+                        <p class="text-secondary">Mobile apps for iOS, Android, and Windows for viewing reports on the go.</p>
+                        <img src="Rnj3rHB5ea6PNS1cPrqse-TaJpxM6rug6g.png" class="img-fluid mt-3 rounded shadow-sm" alt="Mobile View">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="section-padding" id="workflow">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">The Standard Workflow</h2>
+                <p class="lead text-secondary">How a data professional works with Power BI</p>
+            </div>
+            <div class="workflow-timeline">
+                <div class="row g-0 align-items-center mb-5">
+                    <div class="col-md-5 text-md-end pe-md-5">
+                        <h4 class="fw-bold">1. Get Data</h4>
+                        <p class="text-secondary">Import data from Excel, SQL database, Cloud, or Web.</p>
+                    </div>
+                    <div class="col-md-2 text-center position-relative">
+                        <div class="step-circle bg-primary">1</div>
+                    </div>
+                    <div class="col-md-5 ps-md-5">
+                        <img src="choose-remove-columns-remove-columns-icon.png" class="img-fluid rounded h-100-px shadow-sm" alt="Get Data">
+                    </div>
+                </div>
+
+                <div class="row g-0 align-items-center mb-5 flex-row-reverse">
+                    <div class="col-md-5 text-md-start ps-md-5">
+                        <h4 class="fw-bold">2. Transform & Model</h4>
+                        <p class="text-secondary">Clean data using Power Query and relate tables together.</p>
+                    </div>
+                    <div class="col-md-2 text-center position-relative">
+                        <div class="step-circle bg-success">2</div>
+                    </div>
+                    <div class="col-md-5 pe-md-5 text-md-end">
+                        <img src="power-bi-model-relationships-example.webp" class="img-fluid rounded h-100-px shadow-sm" alt="Model Data">
+                    </div>
+                </div>
+
+                <div class="row g-0 align-items-center">
+                    <div class="col-md-5 text-md-end pe-md-5">
+                        <h4 class="fw-bold">3. Visualize & Publish</h4>
+                        <p class="text-secondary">Create drag-and-drop visuals and publish to the cloud.</p>
+                    </div>
+                    <div class="col-md-2 text-center position-relative">
+                        <div class="step-circle bg-warning">3</div>
+                    </div>
+                    <div class="col-md-5 ps-md-5">
+                        <img src="power-bi-dashboard2 (1).png" class="img-fluid rounded h-100-px shadow-sm" alt="Visualize Data">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAX Section -->
+    <section class="section-padding bg-dark text-white" id="dax">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 order-lg-2">
+                    <div class="glass-card p-4">
+                        <img src="63.png" alt="DAX Formulas" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1 pe-lg-5">
+                    <h6 class="text-primary fw-bold text-uppercase mb-3">The Brain of Power BI</h6>
+                    <h2 class="display-5 fw-bold mb-4">Mastering <span class="text-gradient">DAX</span></h2>
+                    <p class="text-white-50 mb-4">DAX (Data Analysis Expressions) is a formula language used across Power BI for creating custom calculations. If Excel formulas and SQL had a baby, it would be DAX.</p>
+                    <ul class="list-unstyled custom-list text-white-50">
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Calculated Columns:</strong> New data added to your tables.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Measures:</strong> Dynamic calculations used in visuals.</li>
+                        <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Time Intelligence:</strong> Compare Year-over-Year (YoY) growth easily.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Collaboration -->
+    <section class="section-padding" id="security">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <img src="power-bi-drillthrough.png" alt="Security" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="display-5 fw-bold mb-4">Enterprise Security</h2>
+                    <p class="text-secondary mb-4">Power BI provides industry-leading security to keep your data safe while making it accessible to those who need it.</p>
+                    <div class="d-flex mb-4">
+                        <div class="feature-bullet me-4"><i class="fas fa-lock"></i></div>
+                        <div>
+                            <h4>Row-Level Security (RLS)</h4>
+                            <p class="small text-secondary">Restrict data access for given users. e.g., Managers only see their own team's data.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="feature-bullet me-4"><i class="fas fa-users"></i></div>
+                        <div>
+                            <h4>Workspaces & Apps</h4>
+                            <p class="small text-secondary">Bundle reports into "Apps" for easy consumption and collaborative development in Workspaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- In-depth Features -->
+    <section class="section-padding bg-dark text-white" id="features">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-4">Advanced Capabilities</h2>
+                    <p class="lead text-white-50">Power BI isn't just about charts. It's about deep discovery.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-item d-flex p-4">
+                        <div class="feature-icon-sm me-4">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                        <div>
+                            <h4>Drill Down / Drill Through</h4>
+                            <p class="text-white-50">Navigate from high-level summaries to microscopic transaction details effortlessly.</p>
+                            <img src="615f685704633ed319978543_6de1446c.png" class="img-fluid mt-2 rounded border border-secondary" alt="Drillthrough">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-item d-flex p-4">
+                        <div class="feature-icon-sm me-4">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div>
+                            <h4>Data Modeling (Relationship)</h4>
+                            <p class="text-white-50">Define how tables connect. One-to-many, many-to-one, and complex filters.</p>
+                            <img src="dark-mode-model-view.png" class="img-fluid mt-2 rounded border border-secondary" alt="Model View">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="section-padding" id="solutions">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase mb-3">Real World Impact</h6>
+                <h2 class="display-5 fw-bold">Solutions for Every Industry</h2>
+                <p class="lead text-secondary">See how Power BI transforms different business sectors.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="solution-card">
+                        <div class="solution-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Finance & Banking</h4>
+                        <p>Monitor cash flow, manage portfolios, and perform risk analysis with real-time financial dashboards.</p>
+                        <ul class="solution-points">
+                            <li>Profit & Loss Tracking</li>
+                            <li>Balance Sheet Automation</li>
+                            <li>Fraud Detection Patterns</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="solution-card">
+                        <div class="solution-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <h4>Retail & E-commerce</h4>
+                        <p>Analyze sales trends, inventory levels, and customer behavior to optimize stock and marketing.</p>
+                        <ul class="solution-points">
+                            <li>Basket Analysis</li>
+                            <li>Churn Prediction</li>
+                            <li>Inventory Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="solution-card">
+                        <div class="solution-icon"><i class="fas fa-hospital"></i></div>
+                        <h4>Healthcare</h4>
+                        <p>Improve patient outcomes by analyzing treatment efficiency and hospital resource management.</p>
+                        <ul class="solution-points">
+                            <li>Patient Wait-time Tracking</li>
+                            <li>Treatment ROI Analysis</li>
+                            <li>Staffing Demand Forecasting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Learning Paths -->
+    <section class="section-padding bg-dark text-white" id="roadmap">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Your Path to <span class="text-gradient">Mastery</span></h2>
+                <p class="lead text-white-50">Follow this step-by-step roadmap to become a Data Architect.</p>
+            </div>
+            <div class="roadmap-container">
+                <div class="roadmap-step">
+                    <div class="roadmap-header">
+                        <div class="roadmap-number">01</div>
+                        <h3>Beginner: Data Visualizer</h3>
+                    </div>
+                    <div class="roadmap-body">
+                        <p>Connect to Excel, create bar charts, maps, and slicers. Learn the interface of Power BI Desktop.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-primary">Power BI Desktop</span>
+                            <span class="badge bg-primary">Basic Visuals</span>
+                            <span class="badge bg-primary">Filters</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="roadmap-step">
+                    <div class="roadmap-header">
+                        <div class="roadmap-number">02</div>
+                        <h3>Intermediate: Data Analyst</h3>
+                    </div>
+                    <div class="roadmap-body">
+                        <p>Master Power Query (M Language), Data Modeling (Relationships), and Basic DAX formulas.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-warning text-dark">Power Query</span>
+                            <span class="badge bg-warning text-dark">Modeling</span>
+                            <span class="badge bg-warning text-dark">DAX Basics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="roadmap-step">
+                    <div class="roadmap-header">
+                        <div class="roadmap-number">03</div>
+                        <h3>Advanced: BI Architect</h3>
+                    </div>
+                    <div class="roadmap-body">
+                        <p>Enterprise logic with Tabular Editor, DAX Studio, Row Level Security, and Admin Management.</p>
+                        <div class="badge-group">
+                            <span class="badge bg-danger">Advanced DAX</span>
+                            <span class="badge bg-danger">RLS</span>
+                            <span class="badge bg-danger">API Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive DAX Library -->
+    <section class="section-padding" id="encyclopedia">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="sidebar-nav sticky-top" style="top: 100px;">
+                        <h4 class="fw-bold mb-4">DAX Encyclopedia</h4>
+                        <div class="list-group list-group-flush shadow-sm rounded">
+                            <a href="#agg" class="list-group-item list-group-item-action">Aggregation Functions</a>
+                            <a href="#time" class="list-group-item list-group-item-action">Time Intelligence</a>
+                            <a href="#filter" class="list-group-item list-group-item-action">Filter Functions</a>
+                            <a href="#logical" class="list-group-item list-group-item-action">Logical Functions</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div id="agg" class="content-section mb-5">
+                        <h3 class="fw-bold"><i class="fas fa-calculator text-primary me-2"></i> Aggregation Functions</h3>
+                        <p class="text-secondary">Used to compute values over a range of data.</p>
+                        <div class="code-box">
+                            <code>Total Sales = SUM(Sales[Amount])</code>
+                        </div>
+                        <p class="small text-muted mt-2"><strong>SUMX:</strong> Iterates row by row. Use for multi-column logic.</p>
+                    </div>
+
+                    <div id="time" class="content-section mb-5">
+                        <h3 class="fw-bold"><i class="fas fa-history text-success me-2"></i> Time Intelligence</h3>
+                        <p class="text-secondary">Compare data across different time periods.</p>
+                        <div class="code-box">
+                            <code>Sales LY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))</code>
+                        </div>
+                        <p class="small text-muted mt-2">Essential for MoM (Month over Month) and YoY (Year over Year) growth.</p>
+                    </div>
+
+                    <div id="filter" class="content-section mb-5">
+                        <h3 class="fw-bold"><i class="fas fa-filter text-warning me-2"></i> Filter Functions</h3>
+                        <p class="text-secondary">Modify the context of your calculations.</p>
+                        <div class="code-box">
+                            <code>All Sales = CALCULATE([Total Sales], ALL(Products))</code>
+                        </div>
+                        <p class="small text-muted mt-2"><strong>CALCULATE:</strong> The most powerful function in DAX.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="section-padding bg-light" id="casestudy">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Case Study: Sales Performance</h2>
+                <p class="lead text-secondary">How we solved a real-world inventory crisis.</p>
+            </div>
+            <div class="row g-0 rounded-4 overflow-hidden shadow-lg bg-white">
+                <div class="col-lg-6">
+                    <img src="power-bi-dashboard2.png" class="img-fluid h-100 object-fit-cover" alt="Case Study">
+                </div>
+                <div class="col-lg-6 p-5">
+                    <h3 class="fw-bold mb-4">The Challenge</h3>
+                    <p class="text-secondary">A retail giant was losing 15% revenue due to stock-outs during seasonal peaks. They had 500+ stores but no central visibility.</p>
+                    <h3 class="fw-bold mb-4 mt-5">The Solution</h3>
+                    <p class="text-secondary">We implemented a Power BI dashboard connecting to their SAP ERP. Using DAX, we created an <strong>Inventory Turnover</strong> metric and an AI-based <strong>Stockout Alert</strong> system.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <h2 class="text-primary fw-bold">25%</h2>
+                            <p class="small text-muted">Stock efficiency</p>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="text-success fw-bold">12%</h2>
+                            <p class="small text-muted">Profit Increase</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Power Query (M Language) Section -->
+    <section class="section-padding" id="powerquery">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 ps-lg-5 order-lg-2">
+                    <h2 class="display-5 fw-bold mb-4">ETL with <span class="text-primary">Power Query</span></h2>
+                    <p class="text-secondary">Data is rarely clean. Power Query is your engine to Extract, Transform, and Load.</p>
+                    <div class="accordion mt-4" id="pqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    Extract: Connect Anything
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#pqAccordion">
+                                <div class="accordion-body">
+                                    Connect to PDFs, Web Pages, SQL, Azure, and 200+ other sources directly.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Transform: Clean Like a Pro
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#pqAccordion">
+                                <div class="accordion-body">
+                                    Remove nulls, split columns, unpivot data, and change data types with one click.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    M Language: The Secret Sauce
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#pqAccordion">
+                                <div class="accordion-body">
+                                    Powerful functional language behind the UI buttons. Expert developers write custom M scripts.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="query-overview-view-icons.png" class="img-fluid rounded-4 shadow-sm" alt="Power Query">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-light-soft" id="faq">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Common Questions</h2>
+                <p class="lead text-secondary">Everything a student needs to know.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item shadow-sm bg-white p-4 rounded-3 mb-3">
+                        <h5 class="fw-bold mb-2">Is Power BI better than Excel?</h5>
+                        <p class="text-secondary mb-0">Power BI is built for large datasets and complex modeling, whereas Excel is best for detailed ad-hoc calculations. They work best together.</p>
+                    </div>
+                    <div class="faq-item shadow-sm bg-white p-4 rounded-3 mb-3">
+                        <h5 class="fw-bold mb-2">Can I learn Power BI without coding?</h5>
+                        <p class="text-secondary mb-0">Yes! 80% of Power BI is drag-and-drop. You only need to learn DAX when you want complex business logic.</p>
+                    </div>
+                    <div class="faq-item shadow-sm bg-white p-4 rounded-3 mb-3">
+                        <h5 class="fw-bold mb-2">What are the job prospects?</h5>
+                        <p class="text-secondary mb-0">The demand for BI Developers is growing by 25% annually. Top companies like Google, Amazon, and Microsoft rely on it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructor Section -->
+    <section class="section-padding" id="instructor">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h6 class="text-primary fw-bold text-uppercase mb-3">Meet Your Mentor</h6>
+                    <h2 class="display-4 fw-bold mb-4">Master Data with <span class="text-gradient">Munna Kumar</span></h2>
+                    <p class="lead text-secondary mb-5">With years of experience in Business Intelligence and Data Analytics, Munna Kumar has empowered thousands of students to master Power BI and transition into high-paying data roles.</p>
+                    <div class="instructor-stats d-flex justify-content-center gap-5">
+                        <div>
+                            <h2 class="fw-bold mb-0">10k+</h2>
+                            <p class="small text-muted">Students Taught</p>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold mb-0">50+</h2>
+                            <p class="small text-muted">Projects Completed</p>
+                        </div>
+                        <div>
+                            <h2 class="fw-bold mb-0">4.9/5</h2>
+                            <p class="small text-muted">Instructor Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Gallery & Pro Tips -->
+    <section class="section-padding bg-light" id="gallery">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Pro Tips & Learning</h2>
+                <p class="lead text-secondary">Enhance your reports with these standard features</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 mb-4">
+                    <div class="info-card h-100">
+                        <img src="wrap%20text.png" class="img-fluid rounded mb-3" alt="Wrap Text">
+                        <h4>Text Formatting</h4>
+                        <p class="text-secondary">Learn how to wrap text in headers and cells to make your tables readable on all screen sizes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="info-card h-100">
+                        <img src="4b019bb1-9699-4bcc-920a-5e73e3312e5e_bc2.png" class="img-fluid rounded mb-3" alt="Layout">
+                        <h4>Modern Layouts</h4>
+                        <p class="text-secondary">Use consistent spacing and grid layouts to create reports that look like professional apps.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 mb-4">
+                <h3 class="fw-bold">Tool Deep Dive</h3>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="Power-BI-Drill-Down.png" class="img-fluid rounded shadow-sm" alt="Drill Down">
+                        <div class="gallery-overlay"><span>Drill Down</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="power-bi-drillthrough.png" class="img-fluid rounded shadow-sm" alt="Drillthrough">
+                        <div class="gallery-overlay"><span>Drillthrough</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="power-bi-expand-filters-pane.png" class="img-fluid rounded shadow-sm" alt="Filters Pane">
+                        <div class="gallery-overlay"><span>Filters Pane</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="63.png" class="img-fluid rounded shadow-sm" alt="Visual Detail">
+                        <div class="gallery-overlay"><span>Chart Types</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="Data%20Category.png" class="img-fluid rounded shadow-sm" alt="Data Category">
+                        <div class="gallery-overlay"><span>Data Categorization</span></div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="gallery-item">
+                        <img src="line-chart-line-segment.png" class="img-fluid rounded shadow-sm" alt="Line Chart">
+                        <div class="gallery-overlay"><span>Line Segmentation</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-5 bg-primary overflow-hidden position-relative">
+        <div class="container text-center py-5 position-relative z-2">
+            <h2 class="fw-bold display-4 mb-4">Start Your Data Journey Today</h2>
+            <p class="lead mb-4 text-dark opacity-75">Become a Power BI certified professional with our expert-led guide.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-dark btn-lg px-5 py-3 rounded-pill shadow">Enroll Now</a>
+                <a href="#" class="btn btn-outline-dark btn-lg px-5 py-3 rounded-pill">Download Curriculum</a>
+            </div>
+        </div>
+        <div class="cta-decoration"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-lg-4 mb-4">
+                    <a class="navbar-brand mb-4 d-block" href="#">
+                        <span class="brand-text text-white">Power<span class="bi-text">BI</span> Mastery</span>
+                    </a>
+                    <p class="text-secondary">The ultimate resource for students and professionals to master the art of data storytelling and business intelligence.</p>
+                    <div class="social-links mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-4">Curriculum</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="footer-link">Desktop Basics</a></li>
+                        <li><a href="#powerquery" class="footer-link">Power Query</a></li>
+                        <li><a href="#dax" class="footer-link">Advanced DAX</a></li>
+                        <li><a href="#solutions" class="footer-link">Industry Use Cases</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h5 class="text-white mb-4">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Documentation</a></li>
+                        <li><a href="#" class="footer-link">Sample Datasets</a></li>
+                        <li><a href="#" class="footer-link">Community Forum</a></li>
+                        <li><a href="#" class="footer-link">Microsoft Exams</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p class="text-secondary small">Get weekly DAX tips and Power BI updates.</p>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="Your Email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center py-3">
+                <p class="text-secondary mb-0">&copy; 2026 Power BI Academy. Created with ❤️ by <strong>Munna Kumar</strong>.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Navbar scroll effect
+    const navbar = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.padding = '10px 0';
+            navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+        } else {
+            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+            navbar.style.padding = '15px 0';
+            navbar.style.boxShadow = 'none';
+        }
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const navHeight = navbar.offsetHeight;
+                window.scrollTo({
+                    top: targetElement.offsetTop - navHeight,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                    bsCollapse.hide();
+                }
+            }
+        });
+    });
+
+    // Animation on Scroll using CSS Classes
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Register elements for animation
+    document.querySelectorAll('.component-card, .info-card, .workflow-timeline .row, .solution-card, .roadmap-step').forEach(el => {
+        el.classList.add('reveal-on-scroll');
+        observer.observe(el);
+    });
+    // Sidebar Active Link handling (Encyclopedia)
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav .list-group-item');
+    const sections = document.querySelectorAll('.content-section');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        sidebarLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // Add particle-like background effect to Hero (Optional Subtle effect)
+    const hero = document.querySelector('.hero-section');
+    for(let i=0; i<20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'hero-particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        hero.appendChild(particle);
+    }
+});
+
+// Particle CSS added via JS
+const particleStyle = document.createElement('style');
+particleStyle.textContent = `
+    .hero-particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(242, 200, 17, 0.3);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: particleFloat 10s linear infinite;
+        z-index: 1;
+    }
+    @keyframes particleFloat {
+        0% { transform: translate(0,0); opacity: 0; }
+        50% { opacity: 1; }
+        100% { transform: translate(${Math.random()*100-50}px, ${-Math.random()*200}px); opacity: 0; }
+    }
+`;
+document.head.appendChild(particleStyle);
