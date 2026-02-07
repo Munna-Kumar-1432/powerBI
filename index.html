@@ -41,17 +41,17 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
-        <div class="container">
+        <div class="container px-4">
             <div class="row align-items-center">
                 <div class="col-lg-6 hero-content">
                     <h1 class="display-3 fw-bold mb-4">Transform Data Into <span class="text-gradient">Actionable Insights</span></h1>
                     <p class="lead mb-4 text-secondary">Master Microsoft Power BI with <strong>Munna Kumar</strong>: The ultimate guide for data visualization and analytics.</p>
                     <div class="hero-cta">
-                        <a href="#about" class="btn btn-primary btn-lg me-3 px-5 py-3">Explore Now</a>
+                        <a href="#about" class="btn btn-primary btn-lg me-lg-3 px-5 py-3">Explore Now</a>
                         <a href="#workflow" class="btn btn-outline-light btn-lg px-5 py-3">See Workflow</a>
                     </div>
                 </div>
-                <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="col-lg-6 mt-lg-0 mt-5">
                     <div class="hero-image-wrapper">
                         <img src="power-bi-dashboard2.png" alt="Power BI Dashboard" class="img-fluid rounded-4 shadow-lg floating-anim">
                     </div>
@@ -69,27 +69,75 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <img src="power-bi-default-visual-filter.png" alt="Power BI Analytics" class="img-fluid rounded-4 shadow-sm">
+                    <div class="about-img-wrapper">
+                        <img src="power-bi-default-visual-filter.png" alt="Power BI Analytics" class="img-fluid rounded-4 shadow-sm">
+                        <div class="floating-badge shadow-lg">
+                            <i class="fas fa-trophy text-primary"></i>
+                            <span>#1 BI Platform</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-6 ps-lg-5">
                     <h6 class="text-primary fw-bold text-uppercase mb-3">About Power BI</h6>
                     <h2 class="display-5 fw-bold mb-4">What is Power BI?</h2>
                     <p class="text-secondary mb-4">Power BI is a collection of software services, apps, and connectors that work together to turn your unrelated sources of data into coherent, visually immersive, and interactive insights.</p>
                     <div class="row g-4 mt-2">
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <div class="info-card">
                                 <i class="fas fa-chart-line text-primary mb-3 h3"></i>
                                 <h5>Visualize</h5>
                                 <p class="small text-secondary">Create stunning charts and reports.</p>
                             </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-sm-6">
                             <div class="info-card">
                                 <i class="fas fa-database text-warning mb-3 h3"></i>
                                 <h5>Connect</h5>
                                 <p class="small text-secondary">Link hundreds of data sources.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Power BI Section (The Advantage) -->
+    <section class="section-padding bg-dark text-white overflow-hidden">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 fw-bold mb-3">Why Power BI <span class="text-primary">Stands Out</span></h2>
+                    <p class="lead text-white-50">It's not just a tool; it's a Complete Data Ecosystem.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-brain"></i></div>
+                        <h4>AI-Powered</h4>
+                        <p class="text-white-50 small">Ask questions in plain English with Q&A features and get instant answers from your data.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-sync"></i></div>
+                        <h4>Real-time Data</h4>
+                        <p class="text-white-50 small">Monitor your business heartbeat with live streaming datasets and automatic refreshes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-puzzle-piece"></i></div>
+                        <h4>Custom Visuals</h4>
+                        <p class="text-white-50 small">Access thousands of community-built visuals or build your own using D3.js or R/Python.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="advantage-card">
+                        <div class="advantage-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <h4>Azure Power</h4>
+                        <p class="text-white-50 small">Seamlessly scales from a small spreadsheet to a massive multi-terabyte Big Data warehouse.</p>
                     </div>
                 </div>
             </div>
@@ -204,6 +252,78 @@
                         <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Measures:</strong> Dynamic calculations used in visuals.</li>
                         <li><i class="fas fa-check-circle text-primary me-2"></i> <strong>Time Intelligence:</strong> Compare Year-over-Year (YoY) growth easily.</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Outcomes (Addon) -->
+    <section class="section-padding bg-light" id="outcomes">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 reveal-left">
+                    <h2 class="display-5 fw-bold mb-4">What You Will <span class="text-primary">Master</span></h2>
+                    <p class="text-secondary mb-5">By the end of this journey, you won't just know tools—you'll be able to build end-to-end BI solutions.</p>
+                    
+                    <div class="outcome-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Data Cleaning (Power Query)</span>
+                            <span class="text-primary">100%</span>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="outcome-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Complex DAX Logic</span>
+                            <span class="text-primary">95%</span>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="outcome-item mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="fw-bold">Visual Storytelling</span>
+                            <span class="text-primary">100%</span>
+                        </div>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 reveal-right">
+                    <div class="outcome-visual-grid ps-lg-5">
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="visual-box bg-white p-4 text-center rounded-4 shadow-sm reveal-zoom">
+                                    <i class="fas fa-microchip text-primary d-block mb-3 h1"></i>
+                                    <h5>Automated Workflows</h5>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="visual-box bg-white p-4 text-center rounded-4 shadow-sm reveal-zoom">
+                                    <i class="fas fa-magic text-warning d-block mb-3 h1"></i>
+                                    <h5>AI Integration</h5>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="visual-box bg-white p-4 text-center rounded-4 shadow-sm reveal-zoom">
+                                    <i class="fas fa-shield-alt text-success d-block mb-3 h1"></i>
+                                    <h5>Bank-Grade Security</h5>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-3">
+                                <div class="visual-box bg-white p-4 text-center rounded-4 shadow-sm reveal-zoom">
+                                    <i class="fas fa-rocket text-danger d-block mb-3 h1"></i>
+                                    <h5>Blazing Speed</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -631,12 +751,91 @@
         </div>
     </section>
 
+    <!-- Dashboard Showcase -->
+    <section class="section-padding bg-white" id="showcase">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase mb-3">Portfolio</h6>
+                <h2 class="display-5 fw-bold">Executive Dashboard Showcase</h2>
+                <p class="lead text-secondary">A glimpse into high-performing Power BI projects and layouts.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="showcase-card">
+                        <div class="showcase-img">
+                            <img src="power-bi-dashboard2.png" alt="Sales Dashboard">
+                        </div>
+                        <div class="showcase-info">
+                            <h4>Sales Intelligence</h4>
+                            <p>Global sales tracking with real-time revenue analytics and target monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="showcase-card">
+                        <div class="showcase-img">
+                            <img src="line-chart-line-segment.png" alt="Trend Analysis">
+                        </div>
+                        <div class="showcase-info">
+                            <h4>Predictive Trends</h4>
+                            <p>Advanced line segmentation and forecasting for seasonal business cycles.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="showcase-card">
+                        <div class="showcase-img">
+                            <img src="dark-mode-model-view.png" alt="Data Modeling">
+                        </div>
+                        <div class="showcase-info">
+                            <h4>Enterprise Schema</h4>
+                            <p>Complex star-schema modeling for multi-source enterprise data integration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="showcase-card">
+                        <div class="showcase-img">
+                            <img src="power-bi-expand-filters-pane.png" alt="Advanced Filters">
+                        </div>
+                        <div class="showcase-info">
+                            <h4>Dynamic Filtering</h4>
+                            <p>Custom filter panes designed for intuitive user exploration and deep-dives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="showcase-card">
+                        <div class="showcase-img">
+                            <img src="wrap%20text.png" alt="Table Reports">
+                        </div>
+                        <div class="showcase-info">
+                            <h4>Operational Reporting</h4>
+                            <p>Clean, readable table reports with optimized formatting for daily audits.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="showcase-card">
+                        <div class="showcase-img">
+                            <img src="63.png" alt="KPI Management">
+                        </div>
+                        <div class="showcase-info">
+                            <h4>Executive KPIs</h4>
+                            <p>High-level summary cards showing critical success metrics for stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <section class="py-5 bg-primary overflow-hidden position-relative">
         <div class="container text-center py-5 position-relative z-2">
             <h2 class="fw-bold display-4 mb-4">Start Your Data Journey Today</h2>
             <p class="lead mb-4 text-dark opacity-75">Become a Power BI certified professional with our expert-led guide.</p>
-            <div class="d-flex justify-content-center gap-3">
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3 px-4">
                 <a href="#" class="btn btn-dark btn-lg px-5 py-3 rounded-pill shadow">Enroll Now</a>
                 <a href="#" class="btn btn-outline-dark btn-lg px-5 py-3 rounded-pill">Download Curriculum</a>
             </div>
@@ -681,9 +880,9 @@
                     <h5 class="text-white mb-4">Newsletter</h5>
                     <p class="text-secondary small">Get weekly DAX tips and Power BI updates.</p>
                     <form class="mt-3">
-                        <div class="input-group">
+                        <div class="input-group mb-3">
                             <input type="email" class="form-control bg-dark text-white border-secondary" placeholder="Your Email">
-                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                            <button class="btn btn-primary px-3" type="submit">Subscribe</button>
                         </div>
                     </form>
                 </div>

@@ -54,20 +54,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     // Register elements for animation
-    document.querySelectorAll('.component-card, .info-card, .workflow-timeline .row, .solution-card, .roadmap-step').forEach(el => {
-        el.classList.add('reveal-on-scroll');
+    const animateElements = document.querySelectorAll(
+        '[class*="reveal-"], .section-padding h2, .section-padding h6, .component-card, .info-card, ' +
+        '.workflow-timeline .row, .advantage-card, .solution-card, .roadmap-step, .showcase-card, ' +
+        '.faq-item, .instructor-stats div, .visual-box, .outcome-item'
+    );
+
+    animateElements.forEach((el) => {
+        // Add default reveal class if none present and no other reveal class exists
+        if (![...el.classList].some(cls => cls.startsWith('reveal-'))) {
+            el.classList.add('reveal-on-scroll');
+        }
         observer.observe(el);
     });
     // Sidebar Active Link handling (Encyclopedia)
     const sidebarLinks = document.querySelectorAll('.sidebar-nav .list-group-item');
     const sections = document.querySelectorAll('.content-section');
+    const sidebarContainer = document.querySelector('.sidebar-nav .list-group');
 
     window.addEventListener('scroll', () => {
         let current = "";
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (window.scrollY >= (sectionTop - 150)) {
+            if (window.scrollY >= (sectionTop - 200)) {
                 current = section.getAttribute('id');
             }
         });
@@ -76,6 +86,18 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.remove('active');
             if (link.getAttribute('href').includes(current)) {
                 link.classList.add('active');
+                
+                // On mobile, scroll the active item into view horizontally
+                if (window.innerWidth < 992 && sidebarContainer) {
+                    const linkRect = link.getBoundingClientRect();
+                    const containerRect = sidebarContainer.getBoundingClientRect();
+                    if (linkRect.left < containerRect.left || linkRect.right > containerRect.right) {
+                        sidebarContainer.scrollTo({
+                            left: link.offsetLeft - 20,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             }
         });
     });
@@ -90,6 +112,33 @@ document.addEventListener('DOMContentLoaded', () => {
         particle.style.animationDelay = Math.random() * 5 + 's';
         hero.appendChild(particle);
     }
+
+    // Custom Cursor
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    const cursorFollower = document.createElement('div');
+    cursorFollower.className = 'custom-cursor-follower';
+    document.body.appendChild(cursorFollower);
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        setTimeout(() => {
+            cursorFollower.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        }, 80);
+    });
+
+    document.querySelectorAll('a, button, .component-card, .info-card, .showcase-card, .solution-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('cursor-active');
+            cursorFollower.classList.add('cursor-follower-active');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('cursor-active');
+            cursorFollower.classList.remove('cursor-follower-active');
+        });
+    });
 });
 
 // Particle CSS added via JS
